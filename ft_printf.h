@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:38:29 by digonza2          #+#    #+#             */
-/*   Updated: 2025/12/29 01:03:37 by digonza2         ###   ########.fr       */
+/*   Updated: 2025/12/29 13:17:26 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 int	ft_printf(char const *str, ...);
 
-int	ft_print_char(char const *str);
+int	ft_print_char(int const c);
+
+int	ft_print_str(char const *s);
 
 #endif
