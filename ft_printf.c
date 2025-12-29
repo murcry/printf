@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:44:53 by digonza2          #+#    #+#             */
-/*   Updated: 2025/12/29 13:16:47 by digonza2         ###   ########.fr       */
+/*   Updated: 2025/12/29 13:26:38 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,11 @@ int	ft_printf(char const *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			len += ft_formats(args, str[i + 1]);	//TODO
+			len += ft_formats(args, str[i + 1]);
 			i++;
 		}
 		else
-			len += ft_print_char(str[i]);			//TODO
+			len += ft_print_char(str[i]);
 	}
 	va_end(args);
 	return (len);
