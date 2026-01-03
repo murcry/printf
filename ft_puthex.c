@@ -6,30 +6,76 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 19:47:51 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/02 13:02:57 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/03 19:28:16 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "ft_printf.h"
+#include "ft_printf.h"
 
-// char	*ft_putnbrbs(unsigned long long n, char *base)
-// {
+/**
+ * @brief
+ * 
+ * @param n
+ * @param base
+ * @return
+ */
+int	ft_putnbr_bs(const unsigned long long n, const char *base)
+{
+	int	len;
 
-// }
+	len = 0;
+	if (n >= ft_strlen(base))
+		len += ft_putnbr_bs(n / ft_strlen(base), base);
+	len += ft_print_char(base[n % ft_strlen(base)]);
+	return (len);
+}
 
-// void	ft_putnbr_fd(int n, int fd)
-// {
-// 	if (n == INT_MIN)
-// 		write(fd, "-2147483648", 11);
-// 	else
-// 	{
-// 		if (n < 0)
-// 		{
-// 			write(fd, "-", 1);
-// 			n *= -1;
-// 		}
-// 		if (n >= 10)
-// 			ft_putnbr_fd(n / 10, fd);
-// 		ft_putchar_fd((n % 10) + '0', fd);
-// 	}
-// }
+/**
+ * @brief
+ * 
+ * @param n
+ * @return
+ */
+int	ft_print_hex(const unsigned int n)
+{
+	char	*base;
+
+	base = "0123456789abcdef";
+	return (ft_putnbr_bs(n, base));
+}
+
+/**
+ * @brief
+ * 
+ * @param n
+ * @return
+ */
+int	ft_print_hexup(const unsigned int n)
+{
+	char	*base;
+
+	base = "0123456789ABCDEF";
+	return (ft_putnbr_bs(n, base));
+}
+
+/**
+ * @brief
+ * 
+ * @param n
+ * @return
+ */
+int	ft_print_punt(const unsigned long long n)
+{
+	int					len;
+
+	len = 0;
+	if (n == 0)
+		return (ft_nil());
+	else
+	{
+		write(1, "0x", 2);
+		len += 2;
+		len += ft_putnbr_bs(n, "0123456789abcdef");
+	}
+	return (len);
+}

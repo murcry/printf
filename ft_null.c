@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 16:25:27 by digonza2          #+#    #+#             */
-/*   Updated: 2025/12/30 19:50:04 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/03 19:45:20 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,25 @@ int	ft_null(void)
  * 
  * @return
  */
-int	ft_nill(void)
+int	ft_nil(void)
 {
-	write(1, "(nill)", 6);
-	return (6);
+	write(1, "(nil)", 5);
+	return (5);
+}
+
+/**
+ * @brief
+ * 
+ * @return
+ */
+int	ft_print_percent(void)
+{
+	write(1, "%", 1);
+	return (1);
+}
+
+int	ft_putminint(void)
+{
+	write(1, "-2147483648", 11);
+	return (11);
 }
