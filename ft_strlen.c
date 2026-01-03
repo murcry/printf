@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/29 00:38:29 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/02 12:59:02 by digonza2         ###   ########.fr       */
+/*   Created: 2025/12/30 19:57:34 by digonza2          #+#    #+#             */
+/*   Updated: 2025/12/30 19:58:03 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
+#include "ft_printf.h"
 
-int	ft_print_char(int const c);
+/**
+ * @brief Computes the length of the string s.
+ *
+ * @param s The string to measure.
+ * @return The number of characters that precede the terminating NUL character.
+ */
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-int	ft_print_str(char const *s);
-
-int	ft_formats(va_list args, char const c);
-
-int	ft_null(void);
-
-int	ft_nill(void);
-
-int	ft_printf(char const *str, ...);
-
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}

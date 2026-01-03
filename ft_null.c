@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_null.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/29 00:38:29 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/02 12:59:02 by digonza2         ###   ########.fr       */
+/*   Created: 2025/12/30 16:25:27 by digonza2          #+#    #+#             */
+/*   Updated: 2025/12/30 19:50:04 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
+#include "ft_printf.h"
 
-int	ft_print_char(int const c);
+/**
+ * @brief
+ * 
+ * @return
+ */
+int	ft_null(void)
+{
+	write(1, "(null)", 6);
+	return (6);
+}
 
-int	ft_print_str(char const *s);
-
-int	ft_formats(va_list args, char const c);
-
-int	ft_null(void);
-
-int	ft_nill(void);
-
-int	ft_printf(char const *str, ...);
-
-#endif
+/**
+ * @brief
+ * 
+ * @return
+ */
+int	ft_nill(void)
+{
+	write(1, "(nill)", 6);
+	return (6);
+}

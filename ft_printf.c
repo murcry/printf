@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:44:53 by digonza2          #+#    #+#             */
-/*   Updated: 2025/12/29 13:26:38 by digonza2         ###   ########.fr       */
+/*   Updated: 2025/12/30 19:50:00 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,20 @@ int	ft_print_str(char const *s)
 	int	i;
 	int	len;
 
+	if (!s)
+		return (ft_null());
 	i = -1;
 	len = 0;
 	while (s[++i])
 		len += ft_print_char((int)s[i]);
 	return (len);
 }
-
+/**
+ * @brief
+ * 
+ * @param
+ * @return
+ */
 int	ft_print_char(int const c)
 {
 	write(1, (char *)&c, 1);
