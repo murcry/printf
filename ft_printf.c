@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:44:53 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/03 19:53:02 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/05 13:04:30 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,8 @@ int	ft_formats(va_list args, const char c)
 		len = ft_print_str(va_arg(args, char *));
 	else if (c == 'p')
 		len += ft_print_punt(va_arg(args, unsigned long long));
-	else if (c == 'd')
+	else if (c == 'd' || c == 'i')
 		len += ft_putnbr(va_arg(args, int));
-	else if (c == 'i')
-		len += ft_print_int(va_arg(args, int));
 	else if (c == 'u')
 		len += ft_print_unsgint(va_arg(args, unsigned int));
 	else if (c == 'x')
