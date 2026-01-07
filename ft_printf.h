@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:38:29 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/03 19:41:57 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 20:12:53 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,7 @@ int		ft_putnbr_bs(unsigned long long n, const char *base);
 
 int		ft_putnbr(int n);
 
-int		ft_print_unsgint(const unsigned int n);
-
 int		ft_print_punt(const unsigned long long n);
-
-int		ft_print_hex(const unsigned int n);
-
-int		ft_print_hexup(const unsigned int n);
 
 int		ft_formats(va_list args, const char c);
 

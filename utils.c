@@ -1,16 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_null.c                                          :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 16:25:27 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/07 17:01:12 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 20:28:26 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/**
+ * @brief Computes the length of the string s.
+ *
+ * @param s The string to measure.
+ * @return The number of characters that precede the terminating NUL character.
+ */
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
 /**
  * @brief Print the string "(null)" for null strings.

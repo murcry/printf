@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:44:53 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/07 17:06:56 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 20:12:56 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,11 @@ int	ft_formats(va_list args, const char c)
 	else if (c == 'd' || c == 'i')
 		len += ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
-		len += ft_print_unsgint(va_arg(args, unsigned int));
+		len += ft_putnbr_bs(va_arg(args, unsigned int), "0123456789");
 	else if (c == 'x')
-		len += ft_print_hex(va_arg(args, unsigned int));
+		len += ft_putnbr_bs(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (c == 'X')
-		len += ft_print_hexup(va_arg(args, unsigned int));
+		len += ft_putnbr_bs(va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if (c == '%')
 		len += ft_print_percent();
 	return (len);
@@ -95,10 +95,7 @@ int	ft_printf(char const *str, ...)
 	while (str[++i])
 	{
 		if (str[i] == '%')
-		{
-			len += ft_formats(args, str[i + 1]);
-			i++;
-		}
+			len += ft_formats(args, str[++i]);
 		else
 			len += ft_print_char(str[i]);
 	}
