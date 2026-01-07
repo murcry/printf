@@ -6,17 +6,17 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 19:06:24 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/03 19:51:32 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 17:14:43 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /**
- * @brief
+ * @brief Print an unsigned number in decimal base.
  * 
- * @param n
- * @return
+ * @param n The number we are printing.
+ * @return The length of the text printed.
  */
 int	ft_print_unsgint(const unsigned int n)
 {
@@ -24,10 +24,10 @@ int	ft_print_unsgint(const unsigned int n)
 }
 
 /**
- * @brief
+ * @brief Print an any decimal based number (from INT_MIN to INT_MAX).
  * 
- * @param n
- * @return
+ * @param n The number we want to print.
+ * @return The length of the text printed.
  */
 int	ft_putnbr(int n)
 {

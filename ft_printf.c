@@ -6,17 +6,17 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 00:44:53 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/05 13:04:30 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 17:06:56 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /**
- * @brief
+ * @brief Prints a string.
  * 
- * @param s
- * @return
+ * @param s The string we are printing.
+ * @return The length of the string printed.
  */
 int	ft_print_str(const char *s)
 {
@@ -33,10 +33,10 @@ int	ft_print_str(const char *s)
 }
 
 /**
- * @brief
+ * @brief Prints a char.
  * 
- * @param c
- * @return
+ * @param c The char we are printing.
+ * @return 1.
  */
 int	ft_print_char(const int c)
 {
@@ -45,11 +45,12 @@ int	ft_print_char(const int c)
 }
 
 /**
- * @brief
+ * @brief This functions read the next variable argument of the function and
+ * print diferent things in case of the char c.
  * 
- * @param args
- * @param c
- * @return
+ * @param args The variable argument of the function.
+ * @param c The "option" char.
+ * @return The length of the text printed.
  */
 int	ft_formats(va_list args, const char c)
 {
@@ -76,11 +77,11 @@ int	ft_formats(va_list args, const char c)
 }
 
 /**
- * @brief
+ * @brief Print ARGUMENT(s) according to FORMAT, or execute according to OPTION
  * 
- * @param str
- * @param ...
- * @return
+ * @param str The principal string we are printing.
+ * @param ... The variable arguments we can print in our function.
+ * @return The length of the text printed.
  */
 int	ft_printf(char const *str, ...)
 {

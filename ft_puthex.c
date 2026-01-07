@@ -6,18 +6,18 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 19:47:51 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/07 16:50:01 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 17:12:32 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /**
- * @brief
+ * @brief Prints any positive number in any base we want.
  * 
- * @param n
- * @param base
- * @return
+ * @param n The number (in decimal base) we want to print.
+ * @param base The base we want for our printed number.
+ * @return The length of the text printed.
  */
 int	ft_putnbr_bs(const unsigned long long n, const char *base)
 {
@@ -33,10 +33,10 @@ int	ft_putnbr_bs(const unsigned long long n, const char *base)
 }
 
 /**
- * @brief
+ * @brief Prints any positive number in lowercase hexdecimal base.
  * 
- * @param n
- * @return
+ * @param n The number we are printing.
+ * @return The length of the text printed.
  */
 int	ft_print_hex(const unsigned int n)
 {
@@ -47,10 +47,10 @@ int	ft_print_hex(const unsigned int n)
 }
 
 /**
- * @brief
+ * @brief Prints any positive number in uppercase hexdecimal base.
  * 
- * @param n
- * @return
+ * @param n The number we are printing.
+ * @return The length of the text printed.
  */
 int	ft_print_hexup(const unsigned int n)
 {
@@ -61,10 +61,11 @@ int	ft_print_hexup(const unsigned int n)
 }
 
 /**
- * @brief
+ * @brief Print the memory allocation for a variable (lowercase hex with
+ * "0x" prefix).
  * 
- * @param n
- * @return
+ * @param n The position in memory.
+ * @return The length of the text printed.
  */
 int	ft_print_punt(const unsigned long long n)
 {

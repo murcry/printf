@@ -6,16 +6,16 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 16:25:27 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/03 19:45:20 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 17:01:12 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /**
- * @brief
+ * @brief Print the string "(null)" for null strings.
  * 
- * @return
+ * @return 6.
  */
 int	ft_null(void)
 {
@@ -24,9 +24,9 @@ int	ft_null(void)
 }
 
 /**
- * @brief
+ * @brief Print the string "(nil)" for null pointers.
  * 
- * @return
+ * @return 5.
  */
 int	ft_nil(void)
 {
@@ -35,9 +35,9 @@ int	ft_nil(void)
 }
 
 /**
- * @brief
+ * @brief Print the "%" char.
  * 
- * @return
+ * @return 1.
  */
 int	ft_print_percent(void)
 {
@@ -45,6 +45,11 @@ int	ft_print_percent(void)
 	return (1);
 }
 
+/**
+ * @brief Print the INT_MIN "-2147483648" (for int) string.
+ * 
+ * @return 11.
+ */
 int	ft_putminint(void)
 {
 	write(1, "-2147483648", 11);
