@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 19:47:51 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/03 19:28:16 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/07 16:50:01 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@
 int	ft_putnbr_bs(const unsigned long long n, const char *base)
 {
 	int	len;
+	int	base_len;
 
 	len = 0;
+	base_len = ft_strlen(base);
 	if (n >= ft_strlen(base))
-		len += ft_putnbr_bs(n / ft_strlen(base), base);
-	len += ft_print_char(base[n % ft_strlen(base)]);
+		len += ft_putnbr_bs(n / base_len, base);
+	len += ft_print_char(base[n % base_len]);
 	return (len);
 }
 
