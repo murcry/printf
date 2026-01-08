@@ -6,7 +6,7 @@
 #    By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/29 11:54:05 by digonza2          #+#    #+#              #
-#    Updated: 2026/01/07 20:13:19 by digonza2         ###   ########.fr        #
+#    Updated: 2026/01/08 18:03:23 by digonza2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,4 +41,4 @@ del:
 
 re: fclean all
 
-.PHONY: make all clean fclean re
+.PHONY: make all clean fclean re del
