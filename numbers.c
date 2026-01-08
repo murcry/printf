@@ -6,7 +6,7 @@
 /*   By: digonza2 <digonza2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 19:06:24 by digonza2          #+#    #+#             */
-/*   Updated: 2026/01/07 20:12:47 by digonza2         ###   ########.fr       */
+/*   Updated: 2026/01/08 18:01:48 by digonza2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_putnbr(int n)
  */
 int	ft_print_punt(const unsigned long long n)
 {
-	int					len;
+	int	len;
 
 	len = 0;
 	if (n == 0)
